@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import TennisSimulator from './Components/TennisSimulator';
 
-function App() {
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+const TitleWrapper = styled.section`
+  padding: 1em;
+  background: papayawhip;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TitleWrapper>
+        <Title>Single Set Tennis Score Simulator</Title>
+      </TitleWrapper>
+      <TennisSimulator />
     </div>
   );
 }
